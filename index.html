@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sigma Tours and Travels</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Customize scrollbar for modern look */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #4f46e5;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+
+    /* Navbar active link style */
+    nav a.active {
+      @apply bg-indigo-600 text-white rounded-lg px-3 py-1 shadow-md;
+    }
+
+    /* Card popular badge */
+    .badge-popular {
+      @apply absolute top-2 right-2 bg-indigo-600 text-white text-xs font-semibold uppercase px-2 py-0.5 rounded;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-200 font-sans leading-relaxed">
+
+  <!-- Header Navbar -->
+  <header class="bg-slate-800 fixed w-full z-30 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-14">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="assets/sigma_logo.png" class="h-8 w-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" role="img">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A4 4 0 118 15.2a4 4 0 01-2.879 2.604zM15 11a5 5 0 015 5v1M15 11V7a3 3 0 116 0v4a2 2 0 104 0V7a5 5 0 00-5-5H5a5 5 0 00-5 5v13a5 5 0 005 5h11a5 5 0 005-5v-2a7 7 0 00-7-7z" />
+        </svg>
+        <span class="text-indigo-400 font-semibold text-lg select-none">Sigma Tours & Travels</span>
+      </a>
+      <nav class="space-x-6 text-sm font-medium flex items-center text-slate-300">
+        <a href="#" class="active transition rounded-md px-3 py-1 hover:bg-indigo-700 hover:text-white" aria-current="page">Home</a>
+        <a href="#vehicles" class="transition rounded-md px-3 py-1 hover:bg-indigo-700 hover:text-white">Vehicles</a>
+        <a href="#book" class="transition rounded-md px-3 py-1 hover:bg-indigo-700 hover:text-white">Book Now</a>
+        <a href="#testimonials" class="transition rounded-md px-3 py-1 hover:bg-indigo-700 hover:text-white">Testimonials</a>
+        <a href="#contact" class="transition rounded-md px-3 py-1 hover:bg-indigo-700 hover:text-white">Contact</a>
+      </nav>
+      <button aria-label="Toggle Theme" id="theme-toggle" class="text-indigo-400 hover:text-indigo-300 focus:outline-none" title="Toggle Dark/Light Theme">
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 select-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.485-8.485l.707.707M3.808 3.808l.707.707M21 12h1M2 12h1m15.485 4.485l.707.707M3.808 20.192l.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-indigo-900/80 via-indigo-900/60 to-indigo-900/90 overflow-hidden">
+    <video
+  autoplay
+  muted
+  loop
+  playsinline
+  class="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none">
+  <source src="Assets/video_ontravel.mp4" type="video/mp4" />
+</video>
+    <div class="relative max-w-5xl mx-auto px-16 text-center z-10 text-white">
+      <h1 class="text-4xl xl:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+        Drive Your Way in Vizag
+      </h1>
+      <p class="text-lg md:text-xl max-w-xl mx-auto mb-8 drop-shadow-md">
+        Premium car rental service in Visakhapatnam with flexible options for all your travel needs...
+      </p>
+      <a href="#book" class="inline-block bg-indigo-600 hover:bg-indigo-700 focus-visible:ring ring-indigo-400 active:bg-indigo-800 rounded-md text-sm font-semibold text-white px-6 py-3 transition shadow-lg drop-shadow-lg">
+        Book Your Ride Now
+      </a>
+      <audio autoplay class="mx-auto py-10" src="assets/car-horn-90973.mp3" controls>
+</audio>
+    </div>
+  </section>
+
+ <!-- Vehicle Collection -->
+  <section id="vehicles" class="py-16 bg-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-center text-white text-2xl font-bold mb-12 tracking-wide">Our Vehicle Collection</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Hatchbacks Card -->
+        <article class="relative bg-slate-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="assets/hatchbacks_car.png" alt="Compact hatchback car parked on a beach road during sunset, purple color" class="w-full h-48 object-cover" />
+          <div class="p-4 text-slate-200">
+            <h3 class="font-semibold mb-1 text-white">Hatchbacks</h3>
+            <p class="text-sm text-slate-400">Compact and fuel-efficient for city drives</p>
+          </div>
+        </article>
+
+        <!-- Sedans Card -->
+        <article class="relative bg-slate-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="assets/sedans_car.png" alt="Luxurious gold sedan car parked near the entrance of an airport under clear sky" class="w-full h-48 object-cover" />
+          <div class="p-4 text-slate-200">
+            <h3 class="font-semibold mb-1 text-white">Sedans</h3>
+            <p class="text-sm text-slate-400">Comfortable and spacious for family trips</p>
+          </div>
+        </article>
+
+        <!-- SUVs Card -->
+        <article class="relative bg-slate-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="assets/suv_car.png" class="w-full h-48 object-cover" />
+          <div class="p-4 text-slate-200">
+            <h3 class="font-semibold mb-1 text-white">SUV's</h3>
+            <p class="text-sm text-slate-400">Powerful vehicles for adventure trips</p>
+          </div>
+        </article>
+
+        <!-- Luxury Cars Card -->
+        <article class="relative bg-slate-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="assets/luxury_car.webp" class="w-full h-48 object-cover" />
+          <div class="p-4 text-slate-200">
+            <h3 class="font-semibold mb-1 text-white">Luxury Cars</h3>
+            <p class="text-sm text-slate-400">Premium experience for special occasions</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Booking Section -->
+  <section id="book" class="bg-indigo-900 py-16 px-6">
+    <div class="max-w-4xl mx-auto bg-indigo-800 rounded-xl shadow-xl p-8">
+      <h2 class="text-white text-3xl font-bold mb-6 text-center">Book Your Ride Now</h2>
+      <form id="booking-form" class="space-y-6 text-slate-50" novalidate>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <label for="name" class="block">
+            <span class="text-sm font-semibold mb-1 block">Full Name</span>
+            <input type="text" id="name" name="name" required placeholder="Your full name"
+              class="w-full rounded-md border border-indigo-400 bg-indigo-700/40 px-4 py-2 placeholder-indigo-400 focus:outline-none focus:ring focus:ring-indigo-500" />
+          </label>
+          <label for="email" class="block">
+            <span class="text-sm font-semibold mb-1 block">Email Address</span>
+            <input type="email" id="email" name="email" required placeholder="you@example.com"
+              class="w-full rounded-md border border-indigo-400 bg-indigo-700/40 px-4 py-2 placeholder-indigo-400 focus:outline-none focus:ring focus:ring-indigo-500" />
+          </label>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <label for="vehicle-type" class="block">
+            <span class="text-sm font-semibold mb-1 block">Select Vehicle Type</span>
+            <select id="vehicle-type" name="vehicle" required
+              class="w-full rounded-md border border-indigo-400 bg-indigo-700/40 px-4 py-2 placeholder-indigo-400 focus:outline-none focus:ring focus:ring-indigo-500">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Hatchbacks">Hatchbacks</option>
+              <option value="Sedans">Sedans</option>
+              <option value="SUVs">SUV's</option>
+              <option value="Luxury Cars">Luxury Cars</option>
+            </select>
+          </label>
+          <label for="uptodate" class="block">
+            <span class="text-sm font-semibold mb-1 block">Pick a Date</span>
+            <input type="date" id="date" name="date" required
+              class="w-full rounded-md border border-indigo-400 bg-indigo-700/40 px-4 py-2 placeholder-indigo-400 focus:outline-none focus:ring focus:ring-indigo-500" />
+          </label>
+          <script>
+  // Get today’s date
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const minDate = `${yyyy}-${mm}-${dd}`;
+
+  // Calculate date 5 years from today
+  const futureDate = new Date(today);
+  futureDate.setFullYear(futureDate.getFullYear() + 5);
+  const fyyyy = futureDate.getFullYear();
+  const fmm = String(futureDate.getMonth() + 1).padStart(2, '0');
+  const fdd = String(futureDate.getDate()).padStart(2, '0');
+  const maxDate = `${fyyyy}-${fmm}-${fdd}`;
+
+  // Set min and max on the input
+  const dateInput = document.getElementById("date");
+  dateInput.min = minDate;
+  dateInput.max = maxDate;
+</script>
+        </div>
+        <label for="notes" class="block">
+          <span class="text-sm font-semibold mb-1 block">Additional Notes</span>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or information..."
+            class="w-full rounded-md border border-indigo-400 bg-indigo-700/40 px-4 py-2 placeholder-indigo-400 focus:outline-none focus:ring focus:ring-indigo-500 resize-none"></textarea>
+        </label>
+        <button type="submit"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 focus-visible:ring ring-indigo-400 rounded-md text-white font-semibold py-3 text-lg transition-shadow shadow-lg">
+          Confirm Booking
+        </button>
+      </form>
+      <p id="form-message" class="mt-4 text-center font-medium hidden"></p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-2xl text-white font-bold mb-12">What Our Customers Say</h2>
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+        <blockquote class="bg-slate-900 rounded-xl p-6 shadow-lg text-slate-200">
+          <p class="mb-4 italic text-lg leading-relaxed">"The vehicle condition was impeccable and the service was very friendly. Made my trip to Vizag a breeze!"</p>
+          <footer class="text-sm font-semibold text-indigo-400">— Sai Nadh Varma.</footer>
+        </blockquote>
+
+        <blockquote class="bg-slate-900 rounded-xl p-6 shadow-lg text-slate-200">
+          <p class="mb-4 italic text-lg leading-relaxed">"Easy booking and great pricing options. The SUV rental was perfect for our family adventure."</p>
+          <footer class="text-sm font-semibold text-indigo-400">— S.Prasad.</footer>
+        </blockquote>
+
+        <blockquote class="bg-slate-900 rounded-xl p-6 shadow-lg text-slate-200">
+          <p class="mb-4 italic text-lg leading-relaxed">"Highly recommend Sigmatoursandtravels! The luxury car added a special touch to our anniversary celebration."</p>
+          <footer class="text-sm font-semibold text-indigo-400">— Krishna Reddy.</footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-indigo-900 py-16 px-6">
+    <div class="max-w-5xl mx-auto text-center text-slate-100">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <p class="mb-8 max-w-lg mx-auto text-indigo-200/90">Have questions or need more info? We are here to help you drive your way in Vizag.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-8 text-indigo-100/90 font-medium text-lg">
+       <a href="https://wa.link/ozvno2" target="_blank">
+      <div class="contact_info">
+       <i class="uil uil-whatsapp-alt contact_icon"></i>
+      <div>
+      <h3 class="contact_title">whatsapp</h3>
+      <span class="contact_subtitle">+91 95813 80812</span>
+          </div>
+      </div>
+      </a>
+        <a href="mailto:contact@Sigmatours&travels.com" class="hover:text-indigo-300 transition flex items-center justify-center gap-3" aria-label="Email us">
+          <i class="uil uil-website-alt contact_icon"></i>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0V6a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+          </svg>
+          contact@Sigma Tours & Travels.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-indigo-500 text-center py-6 text-sm select-none">
+    © 2025 Sigma Tours & Travels. All rights reserved.
+  </footer>
+
+  <script>
+    // Theme toggle with system preference fallback and localStorage persistence
+    (function () {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const darkModeClass = 'dark';
+      const root = document.documentElement;
+
+      function applyTheme(isDark) {
+        if (isDark) {
+          root.classList.add(darkModeClass);
+          themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/>'; // Moon icon
+        } else {
+          root.classList.remove(darkModeClass);
+          themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.485-8.485l.707.707M3.808 3.808l.707.707M21 12h1M2 12h1m15.485 4.485l.707.707M3.808 20.192l.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />'; // Sun icon
+        }
+      }
+
+      function getPreferredTheme() {
+        if (localStorage.getItem('vizag-theme')) {
+          return localStorage.getItem('vizag-theme') === 'dark';
+        } else {
+          return window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+      }
+
+      function toggleTheme() {
+        const isDark = root.classList.contains(darkModeClass);
+        const newIsDark = !isDark;
+        applyTheme(newIsDark);
+        localStorage.setItem('vizag-theme', newIsDark ? 'dark' : 'light');
+      }
+
+      themeToggleBtn.addEventListener('click', toggleTheme);
+
+      // Initialize theme on load
+      applyTheme(getPreferredTheme());
+
+    })();
+
+    // Simple booking form validation and submission simulation
+    document.getElementById('booking-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const messageElem = document.getElementById('form-message');
+      messageElem.classList.add('hidden');
+      messageElem.textContent = '';
+
+      // Check inputs validity
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Simulate submission
+      messageElem.textContent = 'Booking confirmed! Thank you for choosing Sigmatoursandtravels.';
+      messageElem.classList.remove('hidden');
+      messageElem.classList.add('text-green-500');
+
+      // Reset form after "submission"
+      form.reset();
+    });
+  </script>
+</body>
+</html>
+
